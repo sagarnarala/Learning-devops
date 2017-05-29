@@ -37,7 +37,7 @@ touch ansible-nginx/tasks/install_nginx.yml	#Task definition for centos
 - name: NGINX | Installing NGINX On Debian
   apt:
     name: nginx
-    state: latest
+    state: present
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   
 - name: NGINX | Starting NGINX
